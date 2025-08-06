@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/EduHealth/static/css/main.c8a10e71.css",
-    "main.js": "/EduHealth/static/js/main.897316be.js",
-    "static/js/453.4ef921d6.chunk.js": "/EduHealth/static/js/453.4ef921d6.chunk.js",
-    "index.html": "/EduHealth/index.html",
-    "main.c8a10e71.css.map": "/EduHealth/static/css/main.c8a10e71.css.map",
-    "main.897316be.js.map": "/EduHealth/static/js/main.897316be.js.map",
-    "453.4ef921d6.chunk.js.map": "/EduHealth/static/js/453.4ef921d6.chunk.js.map"
+    "main.css": "/static/css/main.233b3b67.css",
+    "main.js": "/static/js/main.2d1d3934.js",
+    "index.html": "/index.html",
+    "main.233b3b67.css.map": "/static/css/main.233b3b67.css.map",
+    "main.2d1d3934.js.map": "/static/js/main.2d1d3934.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8a10e71.css",
-    "static/js/main.897316be.js"
+    "static/css/main.233b3b67.css",
+    "static/js/main.2d1d3934.js"
   ]
 }
