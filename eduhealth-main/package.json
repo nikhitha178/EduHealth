@@ -1,0 +1,54 @@
+{
+  "name": "eduhealth-main",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "lucide-react": "^0.263.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    
+    "dev": "react-scripts start",
+    "server": "echo 'Main interface runs on frontend only'",
+    
+    "start:all": "concurrently -n \"main,doctor-fe,doctor-be,tutor-fe,tutor-be\" -c \"blue,green,yellow,magenta,red\" \"npm run dev\" \"npm run doctor:dev\" \"npm run doctor:server\" \"npm run tutor:dev\" \"npm run tutor:server\"",
+    
+    "start:frontends": "concurrently -n \"main,doctor-fe,tutor-fe\" -c \"blue,green,magenta\" \"npm run dev\" \"npm run doctor:dev\" \"npm run tutor:dev\"",
+    
+    "start:backends": "concurrently -n \"doctor-be,tutor-be\" -c \"yellow,red\" \"npm run doctor:server\" \"npm run tutor:server\"",
+    
+    "doctor:dev": "cd ../doctor/frontend && npm run dev",
+    "doctor:server": "cd ../doctor/backend && npm run server",
+    
+    "tutor:dev": "cd ../tutor/frontend && npm run dev",
+    "tutor:server": "cd ../tutor/backend && npm run server"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
