@@ -13,16 +13,15 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "start-doctor": "cd ../doctor/admin && npm run dev",
-  "start-tutor": "cd ../tutor/admin && npm run dev",
-  "start-all": "concurrently \"npm run start-doctor\" \"npm run start-tutor\" \"set PORT=3001 && npm start\" --names \"DOCTOR,TUTOR,INTERFACE\" --prefix-colors \"blue,green,yellow\"",
-  "dev": "npm run start-all"
-}
-,
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start-doctor": "cd ../doctor/admin && npm run dev",
+    "start-tutor": "cd ../tutor/admin && npm run dev",
+    "start-all": "concurrently \"npm run start-doctor\" \"npm run start-tutor\" \"set PORT=3001 && npm start\" --names \"DOCTOR,TUTOR,INTERFACE\" --prefix-colors \"blue,green,yellow\"",
+    "dev": "npm run start-all"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -42,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "gh-pages": "^6.3.0"
   }
 }
