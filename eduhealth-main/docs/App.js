@@ -5,11 +5,11 @@ export default function EduHealth() {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const handleDoctorClick = () => {
-    window.open('http://localhost:5173', '_self');
+    window.open('https://doctor-backend-nnd5.onrender.com', '_self');
   };
 
   const handleTutorClick = () => {
-    window.open('http://localhost:5175', '_self');
+    window.open('https://tutor-backend-iw7p.onrender.com', '_self');
   };
 
   return (
@@ -34,9 +34,9 @@ export default function EduHealth() {
           height: '80px'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <img 
-              src="/logo.svg" 
-              alt="EduHealth Logo" 
+            <img
+              src="/logo.svg"
+              alt="EduHealth Logo"
               style={{
                 height: '60px',
                 width: 'auto',
@@ -44,7 +44,7 @@ export default function EduHealth() {
               }}
             />
           </div>
-         
+
         </div>
       </header>
 
@@ -73,7 +73,7 @@ export default function EduHealth() {
             margin: '0 auto',
             lineHeight: '1.6'
           }}>
-            Connect with qualified professionals for health consultations and educational excellence. 
+            Connect with qualified professionals for health consultations and educational excellence.
             Book appointments with certified doctors and experienced tutors instantly.
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function EduHealth() {
               border: hoveredCard === 'doctor' ? '2px solid #60a5fa' : '2px solid #bfdbfe', // Blue borders
               cursor: 'pointer',
               transition: 'all 0.3s ease',
-              boxShadow: hoveredCard === 'doctor' 
+              boxShadow: hoveredCard === 'doctor'
                 ? '0 20px 25px -5px rgba(59, 130, 246, 0.15), 0 10px 10px -5px rgba(59, 130, 246, 0.1)'
                 : '0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -1px rgba(59, 130, 246, 0.06)',
               transform: hoveredCard === 'doctor' ? 'translateY(-4px)' : 'translateY(0)'
@@ -116,7 +116,7 @@ export default function EduHealth() {
                 <Stethoscope size={40} color="#3b82f6" /> {/* Blue icon */}
               </div>
             </div>
-            
+
             <h3 style={{
               fontSize: '28px',
               fontWeight: '700',
@@ -126,7 +126,7 @@ export default function EduHealth() {
             }}>
               Doctor Consultation
             </h3>
-            
+
             <p style={{
               color: '#475569',
               textAlign: 'center',
@@ -134,10 +134,10 @@ export default function EduHealth() {
               lineHeight: '1.6',
               fontSize: '16px'
             }}>
-              Book appointments with certified doctors, get medical consultations, 
+              Book appointments with certified doctors, get medical consultations,
               and access healthcare services from the comfort of your home.
             </p>
-            
+
             <div style={{
               display: 'flex',
               alignItems: 'center',
@@ -148,12 +148,12 @@ export default function EduHealth() {
               fontSize: '16px'
             }}>
               <span>Book Appointment</span>
-              <ArrowRight 
-                size={20} 
+              <ArrowRight
+                size={20}
                 style={{
                   transition: 'transform 0.3s ease',
                   transform: hoveredCard === 'doctor' ? 'translateX(8px)' : 'translateX(0)'
-                }} 
+                }}
               />
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function EduHealth() {
               border: hoveredCard === 'tutor' ? '2px solid #60a5fa' : '2px solid #bfdbfe', // Blue borders
               cursor: 'pointer',
               transition: 'all 0.3s ease',
-              boxShadow: hoveredCard === 'tutor' 
+              boxShadow: hoveredCard === 'tutor'
                 ? '0 20px 25px -5px rgba(59, 130, 246, 0.15), 0 10px 10px -5px rgba(59, 130, 246, 0.1)'
                 : '0 4px 6px -1px rgba(59, 130, 246, 0.1), 0 2px 4px -1px rgba(59, 130, 246, 0.06)',
               transform: hoveredCard === 'tutor' ? 'translateY(-4px)' : 'translateY(0)'
@@ -189,7 +189,7 @@ export default function EduHealth() {
                 <BookOpen size={40} color="#1d4ed8" /> {/* Darker blue icon */}
               </div>
             </div>
-            
+
             <h3 style={{
               fontSize: '28px',
               fontWeight: '700',
@@ -199,7 +199,7 @@ export default function EduHealth() {
             }}>
               Tutor Booking
             </h3>
-            
+
             <p style={{
               color: '#475569',
               textAlign: 'center',
@@ -207,10 +207,10 @@ export default function EduHealth() {
               lineHeight: '1.6',
               fontSize: '16px'
             }}>
-              Connect with experienced tutors, schedule learning sessions, 
+              Connect with experienced tutors, schedule learning sessions,
               and enhance your knowledge with personalized educational support.
             </p>
-            
+
             <div style={{
               display: 'flex',
               alignItems: 'center',
@@ -221,12 +221,12 @@ export default function EduHealth() {
               fontSize: '16px'
             }}>
               <span>Find Tutors</span>
-              <ArrowRight 
-                size={20} 
+              <ArrowRight
+                size={20}
                 style={{
                   transition: 'transform 0.3s ease',
                   transform: hoveredCard === 'tutor' ? 'translateX(8px)' : 'translateX(0)'
-                }} 
+                }}
               />
             </div>
           </div>
@@ -249,7 +249,7 @@ export default function EduHealth() {
           }}>
             Why Choose EduHealth?
           </h3>
-          
+
           <div style={{
             display: 'grid',
             gridTemplateColumns: window.innerWidth < 768 ? '1fr' : 'repeat(3, 1fr)',
@@ -280,7 +280,7 @@ export default function EduHealth() {
                 Verified doctors and certified tutors ready to help you
               </p>
             </div>
-            
+
             <div style={{ textAlign: 'center' }}>
               <div style={{
                 width: '64px',
@@ -306,7 +306,7 @@ export default function EduHealth() {
                 Book appointments at your convenience, 24/7 availability
               </p>
             </div>
-            
+
             <div style={{ textAlign: 'center' }}>
               <div style={{
                 width: '64px',
@@ -349,7 +349,7 @@ export default function EduHealth() {
           textAlign: 'center'
         }}>
           <p style={{ color: '#475569', fontSize: '16px' }}>
-            © 2025 <span style={{ fontWeight: '600', color: '#1e3a8a' }}>EduHealth</span>. 
+            © 2025 <span style={{ fontWeight: '600', color: '#1e3a8a' }}>EduHealth</span>.
             Connecting you with healthcare and education professionals.
           </p>
         </div>

@@ -1,15 +1,38 @@
 import React, { useState } from 'react';
 import { BookOpen, ArrowRight, Stethoscope, Users, Calendar, Award } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Import your Doctor and Tutor modules
+import Doctor from "./pages/Doctors";
+import Tutor from "./pages/Tutors";
+import Home from "./pages/Home"; // Your main landing page
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* Home */}
+        <Route path="/" element={<Home />} />
+
+        {/* Doctor Module */}
+        <Route path="/doctor/*" element={<Doctor />} />
+
+        {/* Tutor Module */}
+        <Route path="/tutor/*" element={<Tutor />} />
+      </Routes>
+    </Router>
+  );
+}
 
 export default function EduHealth() {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const handleDoctorClick = () => {
-    window.open('http://localhost:5173', '_self');
+    window.open('https://doctor-backend-nnd5.onrender.com', '_self');
   };
 
   const handleTutorClick = () => {
-    window.open('http://localhost:5175', '_self');
+    window.open('https://tutor-backend-iw7p.onrender.com', '_self');
   };
 
   return (
