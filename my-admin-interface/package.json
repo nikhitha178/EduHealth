@@ -20,7 +20,9 @@
     "start-doctor": "cd ../doctor/admin && npm run dev",
     "start-tutor": "cd ../tutor/admin && npm run dev",
     "start-all": "concurrently \"npm run start-doctor\" \"npm run start-tutor\" \"set PORT=3001 && npm start\" --names \"DOCTOR,TUTOR,INTERFACE\" --prefix-colors \"blue,green,yellow\"",
-    "dev": "npm run start-all"
+    "dev": "npm run start-all",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
