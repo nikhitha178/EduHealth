@@ -1,0 +1,40 @@
+{
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "eduhealth-main/package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "build"
+            }
+        },
+        {
+            "src": "my-admin-interface/package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "build"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/doctor/(.*)",
+            "dest": "/doctor/index.js"
+        },
+        {
+            "src": "/api/tutor/(.*)",
+            "dest": "/tutor/index.js"
+        },
+        {
+            "src": "/admin/(.*)",
+            "dest": "/my-admin-interface/build/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/eduhealth-main/build/$1"
+        }
+    ]
+}
