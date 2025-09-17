@@ -7,7 +7,7 @@ export const TutorContext = createContext()
 
 const TutorContextProvider = (props) => {
 
-    const backendUrl = import.meta.env.VITE_BACKEND_URL
+    const backendUrl = import.meta.env.VITE_TUTOR_BACKEND_URL
 
     const [dToken, setDToken] = useState(localStorage.getItem('dToken') ? localStorage.getItem('dToken') : '')
     const [sessions, setSessions] = useState([])
@@ -77,7 +77,7 @@ const TutorContextProvider = (props) => {
                 { sessionId },
                 { headers: { dToken } }
             );
-    
+
             if (data.success) {
                 toast.success(data.message);
                 getSessions();     // ✅ Refreshes session list
@@ -85,13 +85,13 @@ const TutorContextProvider = (props) => {
             } else {
                 toast.error(data.message);
             }
-    
+
         } catch (error) {
             toast.error(error.message);
             console.log(error);
         }
     }
-    
+
 
     // Getting Doctor dashboard data using API
     const getDashData = async () => {

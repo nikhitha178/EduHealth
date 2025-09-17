@@ -1,6 +1,37 @@
 {
+  "name": "eduhealth",
+  "version": "1.0.0",
+  "homepage": ".",
+  "description": "EduHealth is a web-based platform that provides users with educational and healthcare services, helping them book tutors and doctors easily.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "build": "cd eduhealth-main && npm run build && cd ../my-admin-interface && npm run build"
+  },
   "dependencies": {
-    "react-router-dom": "^7.6.1",
+    "express": "^5.1.0",
+    "path": "^0.12.7",
     "serve": "^14.2.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhitha178/EduHealth.git"
+  },
+  "keywords": [
+    "healthcare",
+    "education",
+    "react",
+    "node",
+    "tutors",
+    "doctors"
+  ],
+  "author": "Nikhitha Janapana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikhitha178/EduHealth/issues"
   }
 }
