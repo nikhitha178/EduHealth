@@ -1,38 +1,20 @@
 import React, { useState } from 'react';
-import { BookOpen, ArrowRight, Stethoscope, Users, Calendar, Award } from 'lucide-react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Import your Doctor and Tutor modules
-import Doctor from "./pages/Doctors";
-import Tutor from "./pages/Tutors";
-import Home from "./pages/Home"; // Your main landing page
-
-function App() {
-  return (
-    <Router>
-      <Routes>
-        {/* Home */}
-        <Route path="/" element={<Home />} />
-
-        {/* Doctor Module */}
-        <Route path="/doctor/*" element={<Doctor />} />
-
-        {/* Tutor Module */}
-        <Route path="/tutor/*" element={<Tutor />} />
-      </Routes>
-    </Router>
-  );
-}
+import { BookOpen, ArrowRight, Stethoscope, Users, Calendar, Award, Settings } from 'lucide-react';
 
 export default function EduHealth() {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const handleDoctorClick = () => {
-    window.open('https://doctor-backend-nnd5.onrender.com', '_self');
+    window.open('http://localhost:5173', '_self');
   };
 
   const handleTutorClick = () => {
-    window.open('https://tutor-backend-iw7p.onrender.com', '_self');
+    window.open('http://localhost:5175', '_self');
+  };
+
+  const handleAdminClick = () => {
+    // Opens admin interface in new tab
+    window.open('http://localhost:3001', '_blank');
   };
 
   return (
@@ -68,6 +50,38 @@ export default function EduHealth() {
             />
           </div>
 
+          {/* Admin Button */}
+          <button
+            onClick={handleAdminClick}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              backgroundColor: '#3b82f6',
+              color: '#ffffff',
+              padding: '12px 20px',
+              borderRadius: '12px',
+              border: 'none',
+              fontWeight: '600',
+              fontSize: '16px',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+              boxShadow: '0 4px 6px -1px rgba(59, 130, 246, 0.25)',
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = '#2563eb';
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 8px 12px -2px rgba(59, 130, 246, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = '#3b82f6';
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = '0 4px 6px -1px rgba(59, 130, 246, 0.25)';
+            }}
+          >
+            <Settings size={20} />
+            <span>Admin</span>
+          </button>
         </div>
       </header>
 

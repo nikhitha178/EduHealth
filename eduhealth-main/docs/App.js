@@ -5,11 +5,11 @@ export default function EduHealth() {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const handleDoctorClick = () => {
-    window.open('https://doctor-backend-nnd5.onrender.com', '_self');
+    window.open('http://localhost:4000', '_self');
   };
 
   const handleTutorClick = () => {
-    window.open('https://tutor-backend-iw7p.onrender.com', '_self');
+    window.open('http://localhost:5000', '_self');
   };
 
   return (
